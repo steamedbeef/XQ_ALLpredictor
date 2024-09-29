@@ -257,8 +257,8 @@ import joblib
 # model_path = os.path.join(current_dir, "04-dashboard-tips/models/lr_with_AL.pkl")
 # scaler_path = os.path.join(current_dir, "04-dashboard-tips/models/lr_scaler_with_AL.pkl")
 
-lr_with_AL = joblib.load("/Users/steamedbeef/Desktop/Study Materials/ShinyApp/04-dashboard-tips/models/lr_with_AL.pkl")
-lr_scaler = joblib.load("/Users/steamedbeef/Desktop/Study Materials/ShinyApp/04-dashboard-tips/models/lr_scaler_with_AL.pkl")
+lr_with_AL = joblib.load("models/lr_with_AL.pkl")
+lr_scaler = joblib.load("models/lr_scaler_with_AL.pkl")
 
 here = Path("images/output.jpg").parent
 
