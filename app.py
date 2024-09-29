@@ -244,7 +244,7 @@ app_ui = ui.page_fluid(
     ui.br(),
     ui.row(
         ui.HTML(
-            "<div style='text-align: center; color: gray; font-size:0.9em;'> Created using Shiny for Python | Jingya liu</a> | Sep '26</div>"
+            "<div style='text-align: center; color: gray; font-size:0.9em;'> Created using Shiny for Python | Jingya Liu</a> | Sep '26</div>"
         )
     ),
 )
@@ -269,11 +269,6 @@ def server(input, output, session):
     @render.text
     @reactive.event(input.predict, ignore_none=False)
     def prediction():
-        input_list = [input.MXD_count(), input.Age(), input.NEUT_count(), input.CREA(), input.LYM_count(),
-                      input.ALT(), input.MXD_per(), input.PLT(), input.PT(), input.NA(), input.BASO_count(),
-                      input.WBC(), input.TP(), input.AST(), input.LYM_per(), input.TT(), input.MCH()]
-        if 0 in input_list:
-            return None
 
         data = {
             "MXD#": input.MXD_count(),
