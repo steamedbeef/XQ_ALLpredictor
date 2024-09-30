@@ -293,12 +293,12 @@ def server(input, output, session):
 
         data = pd.DataFrame([data])
 
-        # 计算等于0的参数数量
         zero_count = (data == 0).sum(axis = 1)
 
-        # 检查条件并返回None或数据
-        if zero_count.iloc[0] >= 6:
-            return "Invalid inputs. Please Check your inputs!"
+        if zero_count.iloc[0] == 17:
+            return None
+        if 6 <= zero_count.iloc[0] < 18:
+            return "Invalid inputs. Please check your inputs!"
 
         data = lr_scaler.transform(data)
 
