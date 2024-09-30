@@ -244,7 +244,7 @@ app_ui = ui.page_fluid(
     ui.br(),
     ui.row(
         ui.HTML(
-            "<div style='text-align: center; color: gray; font-size:0.9em;'> Created using Shiny for Python | Jingya Liu</a> | Sep '26</div>"
+            "<div style='text-align: center; color: gray; font-size:0.9em;'> Created using Shiny for Python | The Second Affiliated Hospital of Army Medical University</a> | Sep '26</div>"
         )
     ),
 )
