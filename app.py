@@ -107,7 +107,7 @@ app_ui = ui.page_fluid(
                     label="MXD%",
                     value=0.0,
                     min=0.0,
-                    max=10000.0
+                    max=100.0
                 ),
                 # 9
                 ui.input_numeric(
@@ -177,7 +177,7 @@ app_ui = ui.page_fluid(
                     label="LYM%",
                     value=0.0,
                     min=0.0,
-                    max=10000.0
+                    max=100.0
                 ),
                 # 17
                 ui.input_numeric(
@@ -292,6 +292,14 @@ def server(input, output, session):
         }
 
         data = pd.DataFrame([data])
+
+        # 计算等于0的参数数量
+        zero_count = (data == 0).sum(axis = 1)
+
+        # 检查条件并返回None或数据
+        if zero_count.iloc[0] >= 6:
+            return "Invalid inputs. Please Check your inputs!"
+
         data = lr_scaler.transform(data)
 
         prediction = lr_with_AL.predict(data)
