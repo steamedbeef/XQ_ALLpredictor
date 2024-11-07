@@ -4,5 +4,4 @@ shinyswatch==0.3.1
 matplotlib==3.7.2
 pandas==2.2.3
 numpy==1.26.4
-sys==3.10.14
 joblib==1.4.2
