@@ -2,9 +2,6 @@ from __future__ import annotations
 
 from shiny import App, ui, render, reactive
 import shinyswatch
-import matplotlib.pyplot as plt
-import io
-from PIL import Image
 
 COL_GRP1 = "#0a9396"
 COL_GRP2 = "#f95738"
@@ -213,7 +210,6 @@ app_ui = ui.page_fluid(
 from pathlib import Path
 import pandas as pd
 import shap
-import pickle
 import joblib
 import numpy as np
 
